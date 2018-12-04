@@ -12,7 +12,9 @@ namespace CO452_AZConsoleApp
         static void Main(string[] args)
         {
             //T11_Town.Check();
-            T12_VAT.Calculate();
+            //T12_VAT.Calculate();
+            T13_Course.CalulateMarks();
+
             Console.ReadKey();
         }
     }
