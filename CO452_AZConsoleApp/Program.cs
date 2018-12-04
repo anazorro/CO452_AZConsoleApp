@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CO452_AZConsoleApp.Unit1;
 
 namespace CO452_AZConsoleApp
 {
@@ -10,6 +11,8 @@ namespace CO452_AZConsoleApp
     {
         static void Main(string[] args)
         {
+            T11_Town.Check();
+            Console.ReadKey();
         }
     }
 }
