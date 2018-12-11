@@ -48,6 +48,11 @@
     <Compile Include="Unit1\T11_Town.cs" />
     <Compile Include="Unit1\T12_VAT.cs" />
     <Compile Include="Unit1\T13_Course.cs" />
+    <Compile Include="Unit2\T31_Game.cs" />
+    <Compile Include="Unit2\T32_Display.cs" />
+    <Compile Include="Unit2\T33_Fairy.cs" />
+    <Compile Include="Unit2\T34_Pressure.cs" />
+    <Compile Include="UserLib.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
