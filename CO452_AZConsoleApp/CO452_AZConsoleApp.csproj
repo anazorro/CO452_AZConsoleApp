@@ -52,10 +52,17 @@
     <Compile Include="Unit2\T32_Display.cs" />
     <Compile Include="Unit2\T33_Fairy.cs" />
     <Compile Include="Unit2\T34_Pressure.cs" />
+    <Compile Include="Unit3\Craps.cs" />
+    <Compile Include="Unit3\Dice.cs" />
+    <Compile Include="Unit3\Game.cs" />
+    <Compile Include="Unit3\Meal.cs" />
     <Compile Include="UserLib.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Independent Study\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
