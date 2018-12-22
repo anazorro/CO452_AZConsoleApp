@@ -21,8 +21,9 @@ namespace CO452_AZConsoleApp
 
             //CalcutateGameScore();
 
-            PlayCraps();
+            //PlayCraps();
 
+            T14_Salary.Calculate();
             Console.ReadKey();
         }
 
