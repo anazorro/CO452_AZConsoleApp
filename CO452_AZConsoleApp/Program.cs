@@ -24,7 +24,12 @@ namespace CO452_AZConsoleApp
 
             //PlayCraps();
 
-            Rocket.Calculate();
+            //Rocket.Calculate();
+
+            //Planetary.Sums();
+
+            //T15_Concert.BuyTickets();
+            
             Console.ReadKey();
         }
 

@@ -20,7 +20,7 @@ namespace CO452_AZConsoleApp.Independent_Study
         public static void Calculate()
         {
             UserLib.WriteTitle("Rocket Game Calculator");
-
+             
             length = UserLib.GetDecimal("Enter the length of the fuel tank (metres) > ");
             width = UserLib.GetDecimal("Enter the width of the fuel tank (metres) > ");
             height = UserLib.GetDecimal("Enter the height of the fuel tank (metres) > ");
