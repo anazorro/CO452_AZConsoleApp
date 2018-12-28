@@ -29,9 +29,14 @@ namespace CO452_AZConsoleApp
             //Planetary.Sums();
 
             //T15_Concert.BuyTickets();
-            
+
+            //Tournament.Teams();
+
+            Game_On.Guess();
+                        
             Console.ReadKey();
         }
+
 
         private static void PlayCraps()
         {

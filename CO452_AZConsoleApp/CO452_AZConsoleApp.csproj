@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Independent Study\Game_On.cs" />
     <Compile Include="Independent Study\Planetary.cs" />
     <Compile Include="Independent Study\Rocket.cs" />
     <Compile Include="Independent Study\Tournament.cs" />
