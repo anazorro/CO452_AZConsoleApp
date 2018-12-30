@@ -10,12 +10,10 @@ namespace CO452_AZConsoleApp.Independent_Study
     {
         private static string name;
         private static string response;
-        private static string y;
-        private static string n;
         private static int input;
         private static int number;
-       
-
+        private static int count = 0;
+        
         public static void Guess()
         {
             UserLib.WriteTitle("Guessing Game");
@@ -23,34 +21,43 @@ namespace CO452_AZConsoleApp.Independent_Study
             name = UserLib.GetString("Enter your name: ");
 
             Console.WriteLine(name + ", I am going to pick a number between 1 and 100.");
-            Console.ReadKey();
-
             Console.WriteLine("You must try to guess the number");
-            Console.ReadKey();
 
             Random rand = new Random();
-
             number = rand.Next(100) + 1;
 
             Console.WriteLine("OK .. I have picked a number.");
-            Console.ReadKey();
 
             YourGuess();
+
+            Console.WriteLine("Total of guesses = " + count);
 
             response = UserLib.GetString("Does anyone else want to play (y/n) ? ");
 
             do
             {
-                if(response == y)
+                if (response == "y")
                 {
+                    name = UserLib.GetString("Enter your name: ");
+
+                    number = rand.Next(100) + 1;
+
                     YourGuess();
+
+                    Console.WriteLine("Total of guesses = " + count);
+
+                    response = UserLib.GetString("Does anyone else want to play (y/n) ? ");
                 }
-                else if(response == n)
+                else if (response == "n")
                 {
                     Console.WriteLine("Thanks for playing!");
+                    Console.WriteLine("-------------------");
+                    Console.WriteLine("Total players = ");
                 }
             }
-            while (response != n);
+            while (response != "n");
+
+
         }
 
         public static void YourGuess()
@@ -71,9 +78,10 @@ namespace CO452_AZConsoleApp.Independent_Study
                 {
                     Console.WriteLine("That is TOO LOW, " + name);
                 }
+                count++;
             }
             while (input > number || input < number);
+
         }
     }
 }
-

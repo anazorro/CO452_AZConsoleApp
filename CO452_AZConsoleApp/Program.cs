@@ -32,8 +32,10 @@ namespace CO452_AZConsoleApp
 
             //Tournament.Teams();
 
-            Game_On.Guess();
-                        
+            //Game_On.Guess();
+
+            Weapons.Store();
+
             Console.ReadKey();
         }
 

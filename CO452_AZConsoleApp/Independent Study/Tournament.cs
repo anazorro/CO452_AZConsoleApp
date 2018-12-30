@@ -8,14 +8,26 @@ namespace CO452_AZConsoleApp.Independent_Study
 {
     class Tournament
     {
-        private static int totalOfPlayers;
-        private static int sizeOfATeam;
+        private static int players;
+        private static int team;
         private static int numberOfTeams;
-        private static int leftoverPlayers;
+        private static int leftover;
 
         public static void Teams()
         {
-            numberOfTeams = totalOfPlayers / sizeOfATeam;
+            UserLib.WriteTitle("Game Tournament");
+
+            players = UserLib.GetInt("Enter the total number of players > ");
+
+            team = UserLib.GetInt("Enter the size of a team > ");
+            
+            numberOfTeams = players / team;
+
+            Console.WriteLine("Number of teams = " + numberOfTeams);
+
+            leftover = players % team;
+
+            Console.WriteLine("Number of players that are leftover without a team = " + leftover);
             
         }
     }
