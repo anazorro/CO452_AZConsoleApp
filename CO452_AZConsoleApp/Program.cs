@@ -34,7 +34,9 @@ namespace CO452_AZConsoleApp
 
             //Game_On.Guess();
 
-            Weapons.Store();
+            //Weapons.Store();
+
+            Game_Choices.FourSkills();
 
             Console.ReadKey();
         }

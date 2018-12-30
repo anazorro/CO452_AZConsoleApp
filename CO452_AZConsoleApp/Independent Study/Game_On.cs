@@ -32,6 +32,19 @@ namespace CO452_AZConsoleApp.Independent_Study
 
             Console.WriteLine("Total of guesses = " + count);
 
+            if(count >= 10)
+            {
+                Console.WriteLine("Terrible!");
+            }
+            else if (count < 10 && count > 5)
+            {
+                Console.WriteLine("Good!");
+            }
+            else if (count < 5)
+            {
+                Console.WriteLine("Very good!");
+            }
+
             response = UserLib.GetString("Does anyone else want to play (y/n) ? ");
 
             do
@@ -45,6 +58,19 @@ namespace CO452_AZConsoleApp.Independent_Study
                     YourGuess();
 
                     Console.WriteLine("Total of guesses = " + count);
+
+                    if (count >= 10)
+                    {
+                        Console.WriteLine("Terrible!");
+                    }
+                    else if (count < 10 && count > 5)
+                    {
+                        Console.WriteLine("Good!");
+                    }
+                    else if (count < 5)
+                    {
+                        Console.WriteLine("Very good!");
+                    }
 
                     response = UserLib.GetString("Does anyone else want to play (y/n) ? ");
                 }

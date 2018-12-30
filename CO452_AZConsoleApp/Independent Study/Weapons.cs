@@ -19,6 +19,8 @@ namespace CO452_AZConsoleApp.Independent_Study
                       
         public static void Store()
         {
+            UserLib.WriteTitle("Weapons");
+
             name = UserLib.GetString("Enter your name > ");
 
             redTokens = UserLib.GetInt("How many red tokens do you have? ");
