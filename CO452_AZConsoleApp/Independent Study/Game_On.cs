@@ -28,7 +28,7 @@ namespace CO452_AZConsoleApp.Independent_Study
 
             Console.WriteLine("OK .. I have picked a number.");
 
-            YourGuess();
+            ToGuess();
 
             Console.WriteLine("Total of guesses = " + count);
 
@@ -55,7 +55,7 @@ namespace CO452_AZConsoleApp.Independent_Study
 
                     number = rand.Next(100) + 1;
 
-                    YourGuess();
+                    ToGuess();
 
                     Console.WriteLine("Total of guesses = " + count);
 
@@ -86,7 +86,7 @@ namespace CO452_AZConsoleApp.Independent_Study
 
         }
 
-        public static void YourGuess()
+        public static void ToGuess()
         {
             do
             {

@@ -19,7 +19,7 @@ namespace CO452_AZConsoleApp.Independent_Study
 
             name = UserLib.GetString("Enter your name > ");
 
-            Instructions();
+            FollowInstructions();
 
             DoSwitch();
         }
@@ -45,7 +45,7 @@ namespace CO452_AZConsoleApp.Independent_Study
                             }
                             else if (response == "n")
                             {
-                                Instructions();
+                                FollowInstructions();
                                 do
                                 {
                                     switch (skillLevel)
@@ -65,7 +65,7 @@ namespace CO452_AZConsoleApp.Independent_Study
                                                 }
                                                 else if (response == "n")
                                                 {
-                                                    Instructions();
+                                                    FollowInstructions();
                                                 }
                                             }
                                             while (response != "y"); break;
@@ -90,7 +90,7 @@ namespace CO452_AZConsoleApp.Independent_Study
             while (response != "y");
         }
 
-        public static void Instructions()
+        public static void FollowInstructions()
         {
             Console.WriteLine(name + ", there are 4 skill levels in this game: ");
             Console.WriteLine("\t1. Advanced");
