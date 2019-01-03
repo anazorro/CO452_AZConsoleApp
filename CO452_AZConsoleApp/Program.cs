@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using CO452_AZConsoleApp.Independent_Study;
-using CO452_AZConsoleApp.Independent_Study.Nuclear_Control;
 using CO452_AZConsoleApp.Unit1;
 using CO452_AZConsoleApp.Unit2;
 using CO452_AZConsoleApp.Unit3;
@@ -39,7 +38,7 @@ namespace CO452_AZConsoleApp
 
             //Game_Choices.FourSkills();
 
-            Test.Main();
+            Test.Principal();
 
             Console.ReadKey();
         }

@@ -45,8 +45,7 @@
   <ItemGroup>
     <Compile Include="Independent Study\Game_Choices.cs" />
     <Compile Include="Independent Study\Game_On.cs" />
-    <Compile Include="Independent Study\Nuclear_Control\NuclearStation.cs" />
-    <Compile Include="Independent Study\Nuclear_Control\Test.cs" />
+    <Compile Include="Independent Study\Nuclear_Control.cs" />
     <Compile Include="Independent Study\Planetary.cs" />
     <Compile Include="Independent Study\Rocket.cs" />
     <Compile Include="Independent Study\Tournament.cs" />

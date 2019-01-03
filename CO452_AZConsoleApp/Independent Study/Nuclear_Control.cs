@@ -4,16 +4,48 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CO452_AZConsoleApp.Independent_Study.Nuclear_Control
+namespace CO452_AZConsoleApp.Independent_Study
 {
+    class Nuclear_Control
+    {
+    }
+
+    class Test
+    {
+        private string choice;
+        private NuclearStation myStation;
+
+        public static void Principal()
+        {
+            Test myTest = new Test();
+            myTest.testStation();
+        }
+
+        public Test()
+        {
+            myStation = new NuclearStation();
+        }
+
+        public void testStation()
+        {
+            myStation.display();
+            choice = myStation.getChoice();
+            if (choice == "1")
+            {
+                myStation.lowerRods();
+            }
+        }
+
+    }
+
     class NuclearStation
     {
         private const string SYSTEMCODE = "NUKEME";
 
         public void display()
         {
-                Console.WriteLine("Nuclear WinterLand Station");
-                Console.WriteLine("=======================================");
+            Console.WriteLine("Nuclear WinterLand Station");
+            Console.WriteLine("=======================================");
             Console.WriteLine("      Main menu");
             Console.WriteLine("      ==============");
             Console.WriteLine("      1: Lower Fuel Rods");
@@ -39,7 +71,7 @@ namespace CO452_AZConsoleApp.Independent_Study.Nuclear_Control
             Console.WriteLine("You require an authorisation code to do this");
             Console.Write("Enter your code now:");
             code = Console.ReadLine();
-            if(code == SYSTEMCODE)
+            if (code == SYSTEMCODE)
             {
                 Console.WriteLine("\n** CODE CORRECT : Fuel rods being lowered");
             }
