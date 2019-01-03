@@ -28,12 +28,38 @@ namespace CO452_AZConsoleApp.Independent_Study
 
         public void testStation()
         {
-            myStation.display();
-            choice = myStation.getChoice();
-            if (choice == "1")
+            do
             {
-                myStation.lowerRods();
+                myStation.display();
+                choice = myStation.getChoice();
+                if (choice == "1")
+                {
+                    myStation.lowerRods();
+                }
+                else if (choice == "2")
+                {
+                    myStation.raiseRods();
+                }
+                else if (choice == "3")
+                {
+                    myStation.activateShields();
+                }
+                else if (choice == "4")
+                {
+                    myStation.deactiveteShields();
+                }
+                else if (choice == "5")
+                {
+                    myStation.toQuit();
+                }
+                else if (choice >= "6")
+                {
+                    Console.WriteLine("Please enter your choice from the Main Menu (1-5) > ");
+                    myStation.display();
+                    choice = myStation.getChoice();
+                }
             }
+            while(choice != "5")
         }
 
     }
@@ -79,7 +105,43 @@ namespace CO452_AZConsoleApp.Independent_Study
             {
                 Console.WriteLine("\n** INCORRECT : please stay where you are!");
                 Console.WriteLine("You will now be escorted from the building!");
+                
             }
+        }
+
+        public void raiseRods()
+        {
+            Console.WriteLine("\n** INCORRECT : please stay where you are!");
+            Console.WriteLine("You will now be escorted from the building!");
+        }
+
+        public void activateShields()
+        {
+
+        }
+
+        public void deactiveteShields()
+        {
+            string code;
+            Console.WriteLine("\nWARNING:DANGER: Deactivate Shields!");
+            Console.WriteLine("You require an authorisation code to do this");
+            Console.Write("Enter your code now:");
+            code = Console.ReadLine();
+            if (code == SYSTEMCODE)
+            {
+                Console.WriteLine("\n** CODE CORRECT : Fuel rods being lowered");
+            }
+            else
+            {
+                Console.WriteLine("\n** INCORRECT : please stay where you are!");
+                Console.WriteLine("You will now be escorted from the building!");
+
+            }
+        }
+
+        public void toQuit()
+        {
+
         }
     }
 }
