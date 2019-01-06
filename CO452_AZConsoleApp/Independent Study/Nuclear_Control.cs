@@ -39,10 +39,64 @@ namespace CO452_AZConsoleApp.Independent_Study
                 else if (choice == "2")
                 {
                     myStation.raiseRods();
+
+                    myStation.display();
+                    choice = myStation.getChoice();
+                    if (choice == "1")
+                    {
+                        myStation.lowerRods();
+                    }
+                    else if (choice == "2")
+                    {
+                        Console.WriteLine("Ok, I see you're persistent! It's time to raise fuel Rods!");
+                    }
+                    else if (choice == "3")
+                    {
+                        Console.WriteLine("Ok, I see you've changed your mind! It's time to activate Shiels!");
+                    }
+                    else if (choice == "4")
+                    {
+                        myStation.deactiveteShields();
+                    }
+                    else if (choice == "5")
+                    {
+                        myStation.toQuit();
+                    }
+                    else if (choice != "5" || choice != "4" || choice != "3" || choice != "2" || choice != "1")
+                    {
+                        Console.WriteLine("Please chose from the Main Menu (1-5): ");
+                    }
                 }
                 else if (choice == "3")
                 {
                     myStation.activateShields();
+
+                    myStation.display();
+                    choice = myStation.getChoice();
+                    if (choice == "1")
+                    {
+                        myStation.lowerRods();
+                    }
+                    else if (choice == "2")
+                    {
+                        Console.WriteLine("Ok, I see you've changed your mind! It's time to raise fuel Rods!");
+                    }
+                    else if (choice == "3")
+                    {
+                        Console.WriteLine("Ok, I see you're persistent! It's time to activate Shiels!");
+                    }
+                    else if (choice == "4")
+                    {
+                        myStation.deactiveteShields();
+                    }
+                    else if (choice == "5")
+                    {
+                        myStation.toQuit();
+                    }
+                    else if (choice != "5" || choice != "4" || choice != "3" || choice != "2" || choice != "1")
+                    {
+                        Console.WriteLine("Please chose from the Main Menu (1-5): ");
+                    }
                 }
                 else if (choice == "4")
                 {
@@ -52,26 +106,22 @@ namespace CO452_AZConsoleApp.Independent_Study
                 {
                     myStation.toQuit();
                 }
-                else if (choice >= "6")
+                else if (choice != "5" || choice != "4" || choice != "3" || choice != "2" || choice != "1")
                 {
-                    Console.WriteLine("Please enter your choice from the Main Menu (1-5) > ");
-                    myStation.display();
-                    choice = myStation.getChoice();
+                    Console.WriteLine("Please chose from the Main Menu (1-5): ");
                 }
-            }
-            while(choice != "5")
+            } while (choice != "5");
         }
-
     }
-
     class NuclearStation
     {
         private const string SYSTEMCODE = "NUKEME";
+        private object myStation;
 
         public void display()
         {
             Console.WriteLine("Nuclear WinterLand Station");
-            Console.WriteLine("=======================================");
+            Console.WriteLine("===============================");
             Console.WriteLine("      Main menu");
             Console.WriteLine("      ==============");
             Console.WriteLine("      1: Lower Fuel Rods");
@@ -111,8 +161,9 @@ namespace CO452_AZConsoleApp.Independent_Study
 
         public void raiseRods()
         {
-            Console.WriteLine("\n** INCORRECT : please stay where you are!");
-            Console.WriteLine("You will now be escorted from the building!");
+            Console.WriteLine("You chose to raise Rods.");
+            Console.WriteLine("But you can change your mind anytime!");
+            Console.WriteLine("");
         }
 
         public void activateShields()
@@ -141,7 +192,7 @@ namespace CO452_AZConsoleApp.Independent_Study
 
         public void toQuit()
         {
-
+            Console.WriteLine("You've chosen to quit, bye bye!");
         }
     }
 }
