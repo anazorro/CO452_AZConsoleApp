@@ -11,11 +11,15 @@ namespace CO452_AZConsoleApp.Independent_Study
         private static decimal length;
         private static decimal width;
         private static decimal height;
-        private static decimal price = 10;
         private static decimal volume;
+
+        private static decimal price = 10;
         private static decimal totalCost;
+
         public const decimal second = 1;
         public static decimal totalSeconds;
+
+        
 
         public static void Calculate()
         {

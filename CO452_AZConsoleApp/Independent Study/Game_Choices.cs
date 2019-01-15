@@ -72,7 +72,7 @@ namespace CO452_AZConsoleApp.Independent_Study
 
                                         default:
                                             Console.WriteLine("Sorry, " + name + ", you should choose 1-4: ");
-                                            skillLevel = UserLib.GetInt("What skill level do you chose? "); break;
+                                            skillLevel = UserLib.GetInt("What skill level do you chose? ", 1,4); break;
 
                                     }
                                 }

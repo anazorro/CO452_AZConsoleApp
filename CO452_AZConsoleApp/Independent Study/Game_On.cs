@@ -80,8 +80,7 @@ namespace CO452_AZConsoleApp.Independent_Study
                     Console.WriteLine("-------------------");
                     Console.WriteLine("Total players = ");
                 }
-            }
-            while (response != "n");
+            } while (response != "n");
 
 
         }

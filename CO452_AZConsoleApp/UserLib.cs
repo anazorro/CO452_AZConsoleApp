@@ -40,6 +40,23 @@ namespace CO452_AZConsoleApp
             return mark;
         }
 
+        public static int GetInt(string prompt, int min, int max1)
+        {
+            bool valid = false;
+            int value;
+            do
+            {
+                value = GetInt(prompt);
+                if(value < min)
+                {
+                    Console.WriteLine("Bad value");
+                }
+
+            } while (!valid);
+
+            return 0;
+        }
+
         /// <summary>
         /// This method displays a prompt for the
         /// user to enter a integer value which is
